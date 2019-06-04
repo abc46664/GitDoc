@@ -1,0 +1,5 @@
+1/git status 查看所有未提交的文件 ；
+2/将‘modified'状态的想提交文件 Xxx.yy
+ git add xxx.yy
+3/ git commit -m '原由'
+4/git push
