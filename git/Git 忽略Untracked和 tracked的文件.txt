@@ -1,0 +1,8 @@
+在使用Git过程中，我们经常碰到的就是，build完代码生成的一堆临时文件，也出现在Git Status中。在Commit时，明明可以用Git Add .一句完成的，结果被迫使用Git Add File一句一句添加。
+福利来了，Git也是很人性化的。如果我们已经明确哪些文件不需要提交，下次即使更改了也不会出现在Git Status里面，对于commit是不是极大的方便了?
+1.首先对于Untracked文件来说，在git项目的目录，使用.gitignore处理文件。
+生成.gitignore文件很简单，在git命令行输入touch .gitignore即可。
+之后打开.gitignore文件，添加需要忽视的文件夹或文件路径(相对）即可,如下
+2.对于tracked文件来说，使用.gitignore是不行的。但是git提供了新的方法。
+使用命令 git update-index --assume-unchanged <files>,添加需要忽视的文件，添加之后，git Status就看不到了。
+取消忽视，使用命令git update-index --no-assume-unchanged <files>
