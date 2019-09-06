@@ -1,0 +1,7 @@
+grant all PRIVILEGES on dbname.* to username@'ip' identified by 'password';
+
+FLUSH PRIVILEGES;
+dbname:允许访问的数据 库，允许全部使用*
+username:用户名
+password:密码
+ip:允许哪个IP访问，允许所有IP用%

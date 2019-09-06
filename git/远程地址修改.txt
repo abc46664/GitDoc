@@ -1,0 +1,2 @@
+1、到目录下查看当前remote地址   ： git remote -v
+2、更新远程地址 ： git remote set-url origin <newurl>
